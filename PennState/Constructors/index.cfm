@@ -11,6 +11,14 @@
  --->
 <!--- <cfset objMusician = CreateObject("component", "Musician").init("george harrison", 81, "electric guitar")> --->
 
-<cfset objMusician = new Musician("paul mccartney", 55, "electric guitar")>
+<!--- <cfset objMusician = new Musician("paul mccartney", 55, "electric guitar")>
+<cfset objMusician.practiceInstrument()>
+ --->
 
+<!--- <cfset objMusician = new Musician("paul mccartneyx", 65, "electric guitarx").practiceInstrument()> --->
+
+<cfset objMusician = new Musician("paul mccartney", 55, "electric guitar")>
+<cfset objMusician.practiceInstrument()>
+
+<cfset objMusician.instrument = "piano">
 <cfset objMusician.practiceInstrument()>

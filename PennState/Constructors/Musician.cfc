@@ -1,8 +1,8 @@
 <cfcomponent>
     <!--- using this we can change the name --->
-    <cfset variables.musicianName = "john lennon">
-    <cfset variables.age = 64>
-    <cfset variables.instrument = "guitar">
+    <cfset variables.musicianName = "">
+    <cfset variables.age = 0>
+    <cfset variables.instrument = "">
 
     <cffunction  name="init">
         <cfargument  name="musicianName">
