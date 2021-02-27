@@ -8,3 +8,5 @@
 <cfset objMusician.setMusicianName("pete best")>
 
 <cfset objMusician.practiceInstrument()>
+
+<cfdump  var="#objMusician#">

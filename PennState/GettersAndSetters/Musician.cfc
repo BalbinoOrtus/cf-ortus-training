@@ -30,7 +30,13 @@
 
     <cffunction  name="setAge">
         <cfargument  name="myAge">
-        <cfset variables.age = arguments.myAge>
+
+        <cfif arguments.myAge lt 1 or arguments.myAge gt 100>
+            <cfthrow message="age is invalid!">
+            <cfabort>
+        <cfelse>
+            <cfset variables.age = arguments.myAge>
+        </cfif>
     </cffunction>
 
     <cffunction  name="setInstrument">
