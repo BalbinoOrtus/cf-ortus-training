@@ -1,0 +1,59 @@
+<!-- ==start== dump {ts '2021-02-26 23:05:42'} format: html -->
+<div id="xl" class="-lucee-dump"><style>
+        .-lucee-dump .disp-none { display: none; }
+        </style>
+        <script>
+        window.__Lucee = { initialized : false,
+                                        addEventListeners : function(selector, event, handler, useCapture){
+                                                useCapture = useCapture || false;
+                                                Array.prototype.forEach.call(
+                                                         document.querySelectorAll(selector)
+                                                        ,function(el, ix) {
+                                                          el.addEventListener(event, handler, useCapture);
+                                                        }
+                                                );
+                                        }
+                                        ,getNextSiblings   : function(el){
+                                                var  orig = el
+                                                        ,result = [];
+                                                while (el && el.nodeType === Node.ELEMENT_NODE) {
+                                                        if (el !== orig)
+                                                                result.push(el);
+                                                        el = el.nextElementSibling || el.nextSibling;
+                                                }
+                                                return result;
+                                        }
+                                        ,onDocumentReady                   : function(){
+                                                var L = window.__Lucee;
+                                                if (L.initialized)
+                                                        return;
+                                                L.addEventListeners(".collapse-trigger", "click", function(evt){
+                                                        var tr = evt.target.closest("tr");
+                                                        var siblings = L.getNextSiblings(tr);
+                                                        siblings.forEach(function(el, ix){
+                                                                el.classList.toggle("disp-none");
+                                                        });
+                                                });
+                                                L.initialized = true;
+                                        }
+                                }
+        
+        document.addEventListener("DOMContentLoaded", __Lucee.onDocumentReady);
+        </script>
+        <style type="text/css">
+        div#xl table {font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:11px; empty-cells:show; color:#000; border-collapse:collapse;}
+        div#xl td {border:1px solid #000; vertical-align:top; padding:2px; empty-cells:show;}
+        div#xl td span {font-weight:bold;}
+        div#xl td.luceeN0 {color:#990000;border-color:#990000;background-color:#ff9aad;}
+        div#xl td.luceeH0 {color:#990000;border-color:#990000;background-color:#ff4542;}
+        div#xl td.luceeN1 {color:#990000;border-color:#990000;background-color:#fc9;}
+        div#xl td.luceeH1 {color:#990000;border-color:#990000;background-color:#f60;}
+        div#xl td.luceeN2 {color:#640030;border-color:#640030;background-color:#e9accc;}
+        div#xl td.luceeH2 {color:#640030;border-color:#640030;background-color:#ca5095;}
+        div#xl td.luceeN3 {color:#996633;border-color:#996633;background-color:#ffc;}
+        div#xl td.luceeH3 {color:#996633;border-color:#996633;background-color:#fc9;}
+        div#xl td.luceeN4 {color:#999999;border-color:#999999;background-color:#ccc;}
+        div#xl td.luceeH4 {color:#999999;border-color:#999999;background-color:#fff;}
+        </style>
+        <table title="F:\Projects\Life\ortus\training\nola_coldfusion_oop\code\PennState\Constructors\index.cfm:7"><tr><td class="collapse-trigger luceeH0" colspan="3" style="cursor:pointer;"><span>Component (Musician) </span><br>Only the functions and data members that are accessible from your location are displayed</td></tr><tr><td class="luceeH0">this</td><td class="luceeN0"><table><tr><td class="luceeN4"><table width="100%"><tr><td class="collapse-trigger luceeH3" colspan="3" style="cursor:pointer;"><span>public</span></td></tr><tr><td class="luceeH3">AGE</td><td class="luceeN3"><table><tr><td class="luceeH1">number</td><td class="luceeN1">64</td></tr></table></td></tr><tr><td class="luceeH3">MUSICIANNAME</td><td class="luceeN3"><table><tr><td class="luceeH1">string</td><td class="luceeN1">ricky starky</td></tr></table></td></tr><tr><td class="luceeH3">practiceInstrument</td><td class="luceeN3"><table><tr><td class="collapse-trigger luceeH2" colspan="3" style="cursor:pointer;"><span>Public Function practiceInstrument</span><br>source: F:\Projects\Life\ortus\training\nola_coldfusion_oop\code\PennState\Constructors\Musician.cfc</td></tr><tr><td class="luceeH2">arguments</td><td class="luceeN2"><table><tr><td class="luceeH2">label</td><td class="luceeH2">name</td><td class="luceeH2">required</td><td class="luceeH2">type</td><td class="luceeH2">default</td><td class="luceeH2">hint</td></tr></table></td></tr><tr><td class="luceeH2">return type</td><td class="luceeN2">any</td></tr></table></td></tr></table></td></tr></table></td></tr></table></div>
+        <!-- ==stop== dump -->
