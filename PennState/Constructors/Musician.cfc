@@ -12,6 +12,8 @@
         <cfset variables.musicianName = arguments.musicianName>
         <cfset variables.age = arguments.age>
         <cfset variables.instrument = arguments.instrument>
+
+        <cfreturn this >
     </cffunction>
 
     <cffunction  name="practiceInstrument">
