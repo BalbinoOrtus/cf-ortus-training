@@ -4,6 +4,16 @@
     <cfset variables.age = 64>
     <cfset variables.instrument = "guitar">
 
+    <cffunction  name="init">
+        <cfargument  name="musicianName">
+        <cfargument  name="age">
+        <cfargument  name="instrument">
+
+        <cfset variables.musicianName = arguments.musicianName>
+        <cfset variables.age = arguments.age>
+        <cfset variables.instrument = arguments.instrument>
+    </cffunction>
+
     <cffunction  name="practiceInstrument">
         <cfoutput>
             #variables.musicianName# is practicing his #variables.instrument# his age is #variables.age#
