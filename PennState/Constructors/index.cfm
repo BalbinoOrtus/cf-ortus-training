@@ -1,3 +1,7 @@
-<!--- <cfset objMusician = new Musician("paul mccartney", 55, "bass guitar").practiceInstrument() > --->
+<cfset objMusician = CreateObject("component", "Musician")>
 
-<cfset objMusician.instrument = "piano">
+<cfset objMusician.musicianName = "ricky starky">
+
+<cfset objMusician.practiceInstrument()>
+
+<cfdump  var="#objMusician#">
