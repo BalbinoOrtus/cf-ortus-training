@@ -1,0 +1,57 @@
+<!-- ==start== dump {ts '2021-02-26 22:30:49'} format: html -->
+<div id="x1" class="-lucee-dump"><style>
+    .-lucee-dump .disp-none { display: none; }
+    </style>
+    <script>
+    window.__Lucee = { initialized : false,
+                                    addEventListeners : function(selector, event, handler, useCapture){
+                                            useCapture = useCapture || false;
+                                            Array.prototype.forEach.call(
+                                                     document.querySelectorAll(selector)
+                                                    ,function(el, ix) {
+                                                      el.addEventListener(event, handler, useCapture);
+                                                    }
+                                            );
+                                    }
+                                    ,getNextSiblings   : function(el){
+                                            var  orig = el
+                                                    ,result = [];
+                                            while (el && el.nodeType === Node.ELEMENT_NODE) {
+                                                    if (el !== orig)
+                                                            result.push(el);
+                                                    el = el.nextElementSibling || el.nextSibling;
+                                            }
+                                            return result;
+                                    }
+                                    ,onDocumentReady                   : function(){
+                                            var L = window.__Lucee;
+                                            if (L.initialized)
+                                                    return;
+                                            L.addEventListeners(".collapse-trigger", "click", function(evt){
+                                                    var tr = evt.target.closest("tr");
+                                                    var siblings = L.getNextSiblings(tr);
+                                                    siblings.forEach(function(el, ix){
+                                                            el.classList.toggle("disp-none");
+                                                    });
+                                            });
+                                            L.initialized = true;
+                                    }
+                            }
+    
+    document.addEventListener("DOMContentLoaded", __Lucee.onDocumentReady);
+    </script>
+    <style type="text/css">
+    div#x1 table {font-family:Verdana, Geneva, Arial, Helvetica, sans-serif; font-size:11px; empty-cells:show; color:#000; border-collapse:collapse;}
+    div#x1 td {border:1px solid #000; vertical-align:top; padding:2px; empty-cells:show;}
+    div#x1 td span {font-weight:bold;}
+    div#x1 td.luceeN0 {color:#990000;border-color:#990000;background-color:#ff9aad;}
+    div#x1 td.luceeH0 {color:#990000;border-color:#990000;background-color:#ff4542;}
+    div#x1 td.luceeN1 {color:#640030;border-color:#640030;background-color:#e9accc;}
+    div#x1 td.luceeH1 {color:#640030;border-color:#640030;background-color:#ca5095;}
+    div#x1 td.luceeN2 {color:#996633;border-color:#996633;background-color:#ffc;}
+    div#x1 td.luceeH2 {color:#996633;border-color:#996633;background-color:#fc9;}
+    div#x1 td.luceeN3 {color:#999999;border-color:#999999;background-color:#ccc;}
+    div#x1 td.luceeH3 {color:#999999;border-color:#999999;background-color:#fff;}
+    </style>
+    <table title="F:\Projects\Life\ortus\training\nola_coldfusion_oop\code\PennState\MyFirstComponent\index.cfm:3"><tr><td class="collapse-trigger luceeH0" colspan="3" style="cursor:pointer;"><span>Component (Musician) </span><br>Only the functions and data members that are accessible from your location are displayed</td></tr><tr><td class="luceeH0">this</td><td class="luceeN0"><table><tr><td class="luceeN3"><table width="100%"><tr><td class="collapse-trigger luceeH2" colspan="3" style="cursor:pointer;"><span>public</span></td></tr><tr><td class="luceeH2">practiceInstrument</td><td class="luceeN2"><table><tr><td class="collapse-trigger luceeH1" colspan="3" style="cursor:pointer;"><span>Public Function practiceInstrument</span><br>source: F:\Projects\Life\ortus\training\nola_coldfusion_oop\code\PennState\MyFirstComponent\Musician.cfc</td></tr><tr><td class="luceeH1">arguments</td><td class="luceeN1"><table><tr><td class="luceeH1">label</td><td class="luceeH1">name</td><td class="luceeH1">required</td><td class="luceeH1">type</td><td class="luceeH1">default</td><td class="luceeH1">hint</td></tr></table></td></tr><tr><td class="luceeH1">return type</td><td class="luceeN1">any</td></tr></table></td></tr></table></td></tr></table></td></tr></table></div>
+    <!-- ==stop== dump -->
