@@ -3,5 +3,5 @@
 <cfset objMusician = new Musician("paul", 61, "guitar")>
 
 <cfoutput>
-    hello world balbino #variables.age# #objMusician.getMusicianName()#
+    hello world balbino #variables.age#
 </cfoutput>

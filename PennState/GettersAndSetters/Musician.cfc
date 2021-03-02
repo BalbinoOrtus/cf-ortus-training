@@ -1,37 +1,35 @@
 <cfcomponent>
-    <cfset variable.musicianName = "">
-    <cfset variable.age = 0>
-    <cfset variable.instrument = "">
+    <!--- using this we can change the name --->
+    <cfset variables.musicianName = "">
+    <cfset variables.age = 0>
+    <cfset variables.instrument = "">
 
     <cffunction  name="init">
         <cfargument  name="musicianName">
         <cfargument  name="age">
         <cfargument  name="instrument">
 
-        <cfset variable.musicianName = arguments.musicianName>
-        <cfset variable.age = arguments.age>
-        <cfset variable.instrument = arguments.instrument>
+        <cfset variables.musicianName = arguments.musicianName>
+        <cfset variables.age = arguments.age>
+        <cfset variables.instrument = arguments.instrument>
 
-        <cfreturn this>
+        <cfreturn this >
     </cffunction>
 
     <cffunction  name="practiceInstrument">
         <cfoutput>
-            <p>#variables.musicianName# is practicing his #variables.instrument#.</p>
-            <p>and he is #variables.age# years old.</p>
+            <p>#variables.musicianName# is practicing his #variables.instrument#</p>
+            <p>his age is #variables.age#</p>
         </cfoutput>
-    </cffunction>
-
-    <cffunction  name="setInstrument">
-        <cfargument  name="myInstrument">
-
-        <cfset variables.instrument = arguments.myInstrument>
     </cffunction>
 
     <cffunction  name="setMusicianName">
         <cfargument  name="myMusicianName">
-
         <cfset variables.musicianName = arguments.myMusicianName>
+    </cffunction>
+
+    <cffunction  name="getMusicianName">
+        <cfreturn uCase( variables.musicianName)>
     </cffunction>
 
     <cffunction  name="setAge">
@@ -43,19 +41,19 @@
         <cfelse>
             <cfset variables.age = arguments.myAge>
         </cfif>
-
-    </cffunction>
-
-    <cffunction  name="getMusicianName">
-        <cfreturn variable.musicianName>
-    </cffunction>
-
-    <cffunction  name="getInstrument">
-        <cfreturn variable.instrument>
     </cffunction>
 
     <cffunction  name="getAge">
-        <cfreturn variable.age>
+        <cfreturn variables.age>
+    </cffunction>
+
+    <cffunction  name="setInstrument">
+        <cfargument  name="myInstrument">
+        <cfset variables.instrument = arguments.myInstrument>
+    </cffunction>
+
+    <cffunction  name="getInstrument">
+        <cfreturn variables.instrument>
     </cffunction>
 
 </cfcomponent>
