@@ -13,9 +13,13 @@
         <cfargument  name="age">
         <cfargument  name="instrument">
 
-        <cfset variables.musicianName = arguments.musicianName>
+        <!--- <cfset variables.musicianName = arguments.musicianName>
         <cfset variables.age = arguments.age>
-        <cfset variables.instrument = arguments.instrument>
+        <cfset variables.instrument = arguments.instrument> --->
+
+        <cfset setMusicianName(arguments.musicianName)>
+        <cfset setAge(arguments.age)>
+        <cfset setInstrument(arguments.instrument)>
 
         <cfreturn this >
     </cffunction>
