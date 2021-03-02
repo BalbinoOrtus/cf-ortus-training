@@ -28,6 +28,10 @@
         <cfset variables.musicianName = arguments.myMusicianName>
     </cffunction>
 
+    <cffunction  name="getMusicianName">
+        <cfreturn uCase( variables.musicianName)>
+    </cffunction>
+
     <cffunction  name="setAge">
         <cfargument  name="myAge">
 
@@ -39,9 +43,17 @@
         </cfif>
     </cffunction>
 
+    <cffunction  name="getAge">
+        <cfreturn variables.age>
+    </cffunction>
+
     <cffunction  name="setInstrument">
         <cfargument  name="myInstrument">
         <cfset variables.instrument = arguments.myInstrument>
+    </cffunction>
+
+    <cffunction  name="getInstrument">
+        <cfreturn variables.instrument>
     </cffunction>
 
 </cfcomponent>

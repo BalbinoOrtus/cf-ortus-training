@@ -4,9 +4,13 @@
 
 <!--- <cfset objMusician.instrument = "piano"> --->
 <cfset objMusician.setInstrument("piano")>
-<cfset objMusician.setAge(56)>
+<cfset objMusician.setAge(57)>
 <cfset objMusician.setMusicianName("pete best")>
 
 <cfset objMusician.practiceInstrument()>
+
+<cfoutput>
+    <p>#objMusician.getMusicianName()# is the best pianist ever</p>
+</cfoutput>
 
 <cfdump  var="#objMusician#">
