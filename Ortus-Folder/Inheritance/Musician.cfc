@@ -1,15 +1,13 @@
-<cfcomponent accessors="true">
+<cfcomponent accessors="true" extends="Entertainer">
 
-    <cfproperty  name="musicianName">
-    <cfproperty  name="age">
     <cfproperty  name="instrument">
 
     <cffunction  name="init">
-        <cfargument  name="musicianName">
+        <cfargument  name="name">
         <cfargument  name="age">
         <cfargument  name="instrument">
 
-        <cfset setMusicianName(arguments.musicianName)>
+        <cfset setName(arguments.name)>
         <cfset setAge(arguments.age)>
         <cfset setInstrument(arguments.instrument)>
 
@@ -18,7 +16,7 @@
 
     <cffunction  name="practiceInstrument">
         <cfoutput>
-            <p>#variables.musicianName# is practicing his #variables.instrument#</p>
+            <p>#variables.name# is practicing his #variables.instrument#</p>
             <p>his age is #variables.age#</p>
         </cfoutput>
     </cffunction>
@@ -32,12 +30,6 @@
         <cfelse>
             <cfset variables.age = arguments.myAge>
         </cfif>
-    </cffunction>
-
-    <cffunction  name="getPaid" access="public">
-        <cfoutput>
-            <p>he has been paid for the work</p>
-        </cfoutput>
     </cffunction>
 
 </cfcomponent>
