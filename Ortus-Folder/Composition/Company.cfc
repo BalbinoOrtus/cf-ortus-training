@@ -9,7 +9,7 @@ component accessors="true"
         setName(arguments.pName);
         setYearFounded(arguments.pYearFounded);
         setDepartmentArray(arrayNew(1));
-        
+
         return this;
     }
 
