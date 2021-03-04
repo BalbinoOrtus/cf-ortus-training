@@ -8,6 +8,8 @@
 
         <cfset setName(arguments.pName)>
         <cfset setJobTitle(arguments.pTitle)>
+
+        <cfreturn this>
     </cffunction>
 
     <cffunction name="showEmployeeInfo">
