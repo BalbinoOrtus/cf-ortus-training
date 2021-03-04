@@ -16,4 +16,16 @@
 <cfset dept1.addEmployee(emp2)>
 <cfset dept1.addEmployee(emp3)>
 
-<cfset dept1.showDepartmentInfo()>
+<!--- <cfset dept1.showDepartmentInfo()> --->
+
+<cfset comp1 = new Company("artcode", 2013)>
+
+<cfset comp1.addDepartment(dept1)>
+
+<cfset dept2 = new Department("Finance", "3")>
+<cfset dept3 = new Department("HR", "2")>
+
+<cfset comp1.addDepartment(dept2)>
+<cfset comp1.addDepartment(dept3)>
+
+<cfset comp1.showCompanyInfo()>
