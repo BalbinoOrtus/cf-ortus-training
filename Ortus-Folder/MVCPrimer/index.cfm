@@ -6,7 +6,7 @@
     <ul>
         <cfloop array="#musicianModel.getMusicianArray()#" item="m">
             <li>
-                <a href="musicianDetails.cfm">#m.name# (age: #m.age#)</a>
+                <a href="musicianDetails.cfm?id=#m.id#">#m.name# (age: #m.age#)</a>
             </li>
         </cfloop>
     </ul>
