@@ -26,7 +26,7 @@
     //d4.fly();
     d4.swim();
     //d4.eat();
-    //d4.quack();
+    d4.quack();
     d4.sellToCustomer();
 
 </cfscript>

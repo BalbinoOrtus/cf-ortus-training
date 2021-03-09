@@ -1,5 +1,5 @@
 
-component extends="Duck" implements="IFlyable, ISwimmable, IEatable"{
+component extends="Duck" implements="IFly, ISwim, IEat"{
     public function fly(){
         writeOutput("<p>this mallard is flying!</p>");
     }
