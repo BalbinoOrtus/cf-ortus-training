@@ -9,6 +9,9 @@ component extends="Duck" implements="IFly, ISwim, IEat"{
     public function eat(){
         writeOutput("<p>this mallard is eating!</p>");
     }
+    public function drinkWater(){
+        writeOutput("<p>this mallard is drinking water!</p>");
+    }
     public function quack(){
         writeOutput("<p>this mallard is quacking!</p>");
     }
