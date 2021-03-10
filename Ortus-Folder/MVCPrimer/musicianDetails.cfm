@@ -5,7 +5,7 @@
 <cfoutput>
     <h1>Musician Details</h1>
 
-    <form name="frmDetails" id="frmDetails" method="get" action=".controllers/MusicianController.cfc">
+    <form name="frmDetails" id="frmDetails" method="post" action="./controllers/MusicianController.cfc?method=saveMusician">
         <div>
             <label for="id">Id</label><br>
             <input type="text" id="id" name="id" value="#theMusician.id#" disabled/>
@@ -19,5 +19,8 @@
             <input type="text" id="age" name="age" value="#theMusician.age#" />
         </div>
 
+        <div>
+            <input type="submit" name="btnSave" id="btnSave" value="save musician">
+        </div>
     </form>
 </cfoutput>
