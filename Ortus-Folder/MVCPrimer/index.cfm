@@ -1,10 +1,11 @@
-<cfset musicianModel = new model.Musician()>
+<!--- <cfset musicianModel = new model.Musician()> --->
 
 <!--- <cfdump var="#m.getMusicianArray()#"> --->
 
 <cfoutput>
     <ul>
-        <cfloop array="#musicianModel.getMusicianArray()#" item="m">
+        <!--- <cfloop array="#musicianModel.getMusicianArray()#" item="m"> --->
+        <cfloop array="#application.objMusician.getMusicianArray()#" item="m">
             <li>
                 <a href="musicianDetails.cfm?id=#m.id#">#m.name# (age: #m.age#)</a>
             </li>
@@ -12,4 +13,5 @@
     </ul>
 </cfoutput>
 
-<cfdump var="#musicianModel.getMusicianById(2)#">
+<!--- <cfdump var="#musicianModel.getMusicianById(2)#"> --->
+<cfdump var="#application.objMusician.getMusicianById(2)#">

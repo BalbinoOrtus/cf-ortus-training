@@ -1,4 +1,5 @@
-<cfset theMusician = new model.Musician().getMusicianById(url.id)>
+<!--- <cfset theMusician = new model.Musician().getMusicianById(url.id)> --->
+<cfset theMusician = application.objMusician.getMusicianById(url.id)>
 
 <cfdump var="#theMusician#">
 

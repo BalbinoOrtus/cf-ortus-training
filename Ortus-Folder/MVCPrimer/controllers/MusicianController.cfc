@@ -4,6 +4,10 @@
         <cfargument name="name">
         <cfargument name="age">
 
-        <cflocation url="../musicianDetails.cfm?success=1&id=#arguments.id#" addtoken="false">
+        <!--- <cfset var model = new MVCPrimer.model.Musician().saveMusician(arguments.id, arguments.name, arguments.age)> --->
+        <cfset var model = application.objMusician.saveMusician(arguments.id, arguments.name, arguments.age)>
+
+        <!--- <cflocation url="../musicianDetails.cfm?success=1&id=#arguments.id#" addtoken="false"> --->
+        <cflocation url="../index.cfm" addtoken="false">
     </cffunction>
 </cfcomponent>

@@ -19,4 +19,12 @@ component accessors="true" {
             }
         }
     }
+
+    public function saveMusician (id, name, age){
+        var m = getMusicianById(arguments.id);
+        m.name = arguments.name
+        m.age = arguments.age
+
+        musicianArray[arguments.id]=m;
+    }
 }
