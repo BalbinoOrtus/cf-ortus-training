@@ -8,7 +8,8 @@
     <form name="frmDetails" id="frmDetails" method="post" action="./controllers/MusicianController.cfc?method=saveMusician">
         <div>
             <label for="id">Id</label><br>
-            <input type="text" id="id" name="id" value="#theMusician.id#" disabled/>
+            <input type="text" id="idx" name="idx" value="#theMusician.id#" disabled/>
+            <input type="hidden" id="id" name="id" value="#theMusician.id#">
         </div>
         <div>
             <label for="name">Name</label><br>
