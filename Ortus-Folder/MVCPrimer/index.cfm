@@ -1,7 +1,7 @@
 <!--- <cfset musicianModel = new model.Musician()> --->
 
 <!--- <cfdump var="#m.getMusicianArray()#"> --->
-
+<h1>musicians</h1>
 <cfoutput>
     <ul>
         <!--- <cfloop array="#musicianModel.getMusicianArray()#" item="m"> --->
@@ -15,3 +15,15 @@
 
 <!--- <cfdump var="#musicianModel.getMusicianById(2)#"> --->
 <cfdump var="#application.objMusician.getMusicianById(2)#">
+
+<h1>actors</h1>
+<cfoutput>
+    <ul>
+        <!--- <cfloop array="#musicianModel.getMusicianArray()#" item="m"> --->
+        <cfloop array="#application.objActor.getActorArray()#" item="actor">
+            <li>
+                <a href="actorDetails.cfm?id=#actor.id#">#actor.name# (age: #actor.age#)</a>
+            </li>
+        </cfloop>
+    </ul>
+</cfoutput>
