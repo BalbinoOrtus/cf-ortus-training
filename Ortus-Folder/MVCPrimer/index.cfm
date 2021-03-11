@@ -27,3 +27,5 @@
         </cfloop>
     </ul>
 </cfoutput>
+
+<cfdump var="#application.objActor.getActorById(2)#">

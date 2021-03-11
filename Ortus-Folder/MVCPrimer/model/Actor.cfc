@@ -24,6 +24,6 @@ component accessors="true"{
         actor.name = arguments.name
         actor.age = arguments.age
 
-        musicianArray[arguments.id]=actor;
+        actorArray[arguments.id]=actor;
     }    
 }
