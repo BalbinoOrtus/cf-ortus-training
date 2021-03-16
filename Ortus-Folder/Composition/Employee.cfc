@@ -13,9 +13,15 @@
     </cffunction>
 
     <cffunction name="showEmployeeInfo">
+        <!--- <cfset var objDateUtils = createObject("component", "DateUtils")> --->
+        <!--- <cfset var objDateUtils = new DateUtils()> --->
+
+        <cfset var objDateUtils = Wirebox.getBean("DateUtils")>
+
         <cfoutput>
             <p>name: #getName()#</p>
             <p>job title: #getJobTitle()#</p>
+            <p>date: #objDateUtils.getTodayDate()#</p>
         </cfoutput>
     </cffunction>
 </cfcomponent>
