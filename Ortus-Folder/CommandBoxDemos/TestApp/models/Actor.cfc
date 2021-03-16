@@ -1,5 +1,5 @@
 
-component accessors="true"{
+component accessors="true" singleton{
     property name="actorArray" type="array";
 
     public function init(){

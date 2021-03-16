@@ -3,6 +3,8 @@
  */
 component{
 
+	property name="actor" inject;
+
 	// OPTIONAL HANDLER PROPERTIES
 	this.prehandler_only 	= "";
 	this.prehandler_except 	= "";
@@ -36,9 +38,32 @@ component{
 	 * index
 	 */
 	function index( event, rc, prc ){
-		event.setView( "Actor/index" );
+		event.setView( "Actors/index" );
 	}
 
+	function list( event, rc, prc ){
+/* 		var objActor = new models.Actor();
+		prc.actorList = objActor.getActorArray(); */
+		/* writeDump(actor.getActorArray());
+		abort; */
+		prc.actorList = actor.getActorArray();
+	}
 
+	function detail(event, rc, prc){
+		/* var objActor = new models.Actor();
+		rc.actor = objActor.getActorById(rc.id); */
+		rc.actor = actor.getActorById(rc.id);
+	}
+
+	function save(event, rc, prc){
+		/* var objActor = new models.Actor();
+		objActor.saveActor(rc.id, rc.name, rc.age)
+		prc.actorList = objActor.getActorArray();
+		event.setView( "Actors/list" ); */
+
+		actor.saveActor(rc.id, rc.name, rc.age);
+		prc.actorList = actor.getActorArray();
+		event.setView( "Actors/list" );
+	}	
 
 }
